@@ -25,6 +25,20 @@
         </trim>
     </insert>
     
+    <!-- insert for insertUserBatch-->
+    <insert id="insertUserBatch" parameterType="java.util.List"> 
+        INSERT INTO user(name,age,sex,information) 
+        VALUES
+        <foreach collection ="list" item="user" index= "index" separator =",">
+             (
+                #{user.name}, #{user.age}, #{user.sex}, #{user.information}
+             )
+        </foreach>
+        ON DUPLICATE KEY UPDATE 
+        sex=VALUES(sex),
+        information=VALUES(information)
+    </insert>
+    
     <!-- update for updateUser -->
     <update id="updateUser" parameterType="user">
         update user

@@ -16,3 +16,9 @@ Content-Type: application/json
     "sex":"未知",
     "information":"这是一个测试用户"
 }
+
+### 随机更新
+POST /user/test/batch?rows=1000 HTTP/1.1
+Host: 127.0.0.1:9527
+User-Agent: rest-client
+Accept: */*

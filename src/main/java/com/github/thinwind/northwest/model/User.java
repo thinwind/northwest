@@ -86,7 +86,11 @@ public class User {
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return String.format("User [id=%s, name=%s, age=%s, sex=%s, information=%s, createTime=%s]",
+                id, name, age, sex, information, createTime);
+    }
     
 }

@@ -15,6 +15,7 @@
  */
 package com.github.thinwind.northwest;
 
+import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import com.github.thinwind.northwest.model.User;
 import org.springframework.stereotype.Repository;
@@ -46,6 +47,13 @@ public interface UserDao {
         * @return
         */
         int insertUser(User user);
+        
+        /**
+         * 批量更新
+         * @param users
+         * @return
+         */
+        int insertUserBatch(List<User> users);
         
         /**
         * TODO 说明
