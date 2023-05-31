@@ -1,0 +1,18 @@
+GET /user/base/4 HTTP/1.1
+Host: 127.0.0.1:9527
+User-Agent: rest-client
+Accept: */*
+
+### update
+POST /user/base/ HTTP/1.1
+Host: 127.0.0.1:9527
+User-Agent: rest-client
+Accept: */*
+Content-Type: application/json
+
+{
+    "name":"张三",
+    "age":28,
+    "sex":"未知",
+    "information":"这是一个测试用户"
+}
